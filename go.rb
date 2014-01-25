@@ -11,6 +11,12 @@ puts "RockPaperScissors V0.1.\nMade in Ruby at GlobalGameJam 2014 at Cologne Gam
 @input = nil
 @game_over = false
 
+# helpers
+def scnclr
+	system "clear" unless system "cls"
+end
+
+# the methods
 def askForInput
 	puts "██╗  ██╗███████╗██╗   ██╗     ██╗  ██╗ ██████╗     ███╗   ███╗ █████╗ ████████╗███████╗██╗   ██╗██╗██╗"
 	puts "██║  ██║██╔════╝╚██╗ ██╔╝     ██║  ██║██╔═══██╗    ████╗ ████║██╔══██╗╚══██╔══╝██╔════╝╚██╗ ██╔╝██║██║"
@@ -45,7 +51,6 @@ def gameOver
 end
 
 def invalidInput
-	system "clear" unless system "cls"
 	puts "Matey! Please give me a number from one - three."
 	puts ""
 	askForInputAgain
@@ -55,9 +60,51 @@ def playComputer
 	@computer_played = rand(3)
 end
 
+def tie
+	scnclr
+	puts " ██████╗ ██╗  ██╗██╗"
+	puts "██╔═══██╗██║  ██║██║"
+	puts "██║   ██║███████║██║"
+	puts "██║   ██║██╔══██║╚═╝"
+	puts "╚██████╔╝██║  ██║██╗"
+	puts " ╚═════╝ ╚═╝  ╚═╝╚═╝"
+ 	puts "We chose both the same. Let's play again."
+end
+
+def playerWon
+	puts "Player won"
+end
+
+def playerLost
+	puts "Player lost"
+end
+
+#@items[0] = "Rock"
+#@items[1] = "Paper"
+#@items[2] = "Scissors"
+def isWinningCondition?(human, computer)
+	won = false
+	if human == 0 and computer == 2
+		won = true
+	elsif human == 1 and computer == 0
+		won = true
+	elsif human == 2 and computer == 1
+		won = true
+	end
+	return won
+end
+
 def okLetsGamble
 	puts "Ya got the " + @items[@human_played] + "!!"
 	puts "Me chose the " + @items[@computer_played] + "!!"
+
+	if @human_played == @computer_played
+		tie
+	elsif isWinningCondition?(@human_played, @computer_played)
+		playerWon
+	else
+		playerLost	
+	end
 	gameOver
 end
 
@@ -66,6 +113,7 @@ def isInputOkay?(input)
 end
 
 # the "main"
+scnclr
 askForInput
 
 until (@game_over)
@@ -78,4 +126,3 @@ until (@game_over)
 		okLetsGamble
 	end
 end
-
