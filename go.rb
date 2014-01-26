@@ -70,7 +70,7 @@ def askForAnotherGame
 	elsif @input == "coward"
 		@gameover_condition = "coward"
 		@game_over = true
-	elsif @input == "head for treasure"
+	elsif @input == "search for treasure"
 		@gameover_condition = "treasure"
 		@game_over = true
 	elsif @input == "swordfight"
