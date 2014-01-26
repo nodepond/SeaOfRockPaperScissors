@@ -32,6 +32,13 @@ Start the game
 ruby go.rb
 ```
 
+Bonus
+-----
+
+Mac-pirates will also like to install the Pirates.terminal color-scheme. 
+
+Unfortunately I did not found a good method to let the music play in a looped style on all systems, so there is no music, but the mp3-file still lives in there. 
+
 Copyright
 ---------
 
