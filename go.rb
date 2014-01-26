@@ -1,4 +1,5 @@
 load 'asciiart.rb'
+load 'talkengine.rb'
 
 puts "RockPaperScissors V0.1.\nMade in Ruby at GlobalGameJam 2014 at Cologne Game Lab by Martin \"Nodepond\" Wisniowski\n\n"
 
@@ -90,12 +91,6 @@ def stats
 	puts "   Games lost: " + @games_lost.to_s
 	puts "   Games tie: " + @games_tie.to_s
 	puts ""
-	puts ">-----[ I N F o ]-----------------------------------------------------<"
-	puts "   This silly game was made by 'Nodepond'"
-	puts "         for Global Game Jam 2014 at Cologne Game Lab."
-	puts "   It is open sourced and available at github."
-	puts "         Who knows what this game will develop into!!"
-	puts "   Feel free to contribute!"
 	#puts "°'''''°'°'°'''°''°'°''''°''°'''°''°'°''°'°''°'°'°''''°''°'°'°'°'°°°'''°"
 	
 	askForAnotherGame
@@ -172,6 +167,41 @@ def playerWon
 	puts " ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝╚═╝"
     puts ""                                                                       
 	puts "You won!!"
+
+	puts ""                                                                       
+	puts "Please tell me what you need in order to succeed?"
+	succeed = gets.strip
+	if succeed == ""
+		# skip this
+	else
+		@user_wisdoms_more << succeed
+	
+		puts "And now tell me what to avoid order to succeed?"
+		avoid = gets.strip
+		@user_wisdoms_less << avoid
+	end
+
+
+	scnclr
+	puts " ██████╗ ██████╗ ███╗   ██╗ ██████╗ ██████╗  █████╗ ████████╗███████╗██╗██╗"
+	puts "██╔════╝██╔═══██╗████╗  ██║██╔════╝ ██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██║██║"
+	puts "██║     ██║   ██║██╔██╗ ██║██║  ███╗██████╔╝███████║   ██║   ███████╗██║██║"
+	puts "██║     ██║   ██║██║╚██╗██║██║   ██║██╔══██╗██╔══██║   ██║   ╚════██║╚═╝╚═╝"
+	puts "╚██████╗╚██████╔╝██║ ╚████║╚██████╔╝██║  ██║██║  ██║   ██║   ███████║██╗██╗"
+	puts " ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝╚═╝"
+    puts ""                                                                       
+	puts "You won!!"
+
+	if @user_wisdoms_more.length > 0
+		rnd = rand(@user_wisdoms_more.length)
+		puts ""
+		puts ">-----[ Y O U   S A Y ]-----------------------------------------------<"
+		puts "   "
+		puts "   'If you want to be a wise person, you will need more " + @user_wisdoms_more[rnd]
+		puts "       while trying to avoid " + @user_wisdoms_less[rnd]+"."
+		puts ""
+	end
+	
 	@games_won += 1
 	stats
 end
@@ -185,7 +215,13 @@ def playerLost
 	puts "╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝"
 	puts ""
 	puts "You lost!"
+	rnd = rand(@computer_wisdoms.length)
 	puts ""
+	puts ">-----[ P I R A T E   S A Y S ]---------------------------------------<"
+	puts ""
+	puts "   " + @computer_wisdoms[rnd]
+	puts ""
+	
 	@games_lost += 1
 	stats
 end
