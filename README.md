@@ -18,13 +18,19 @@ Instructions
 You need ruby and a console to play this game.
 
 To install the game, just clone it from github:
-**git clone https://github.com/nodepond/SeaOfRockPaperScissors.git**
+```
+git clone https://github.com/nodepond/SeaOfRockPaperScissors.git
+```
 
 Then change directory
-**cd SeaOfRockPaperScissors**
+```
+cd SeaOfRockPaperScissors
+```
 
 Start the game
-**ruby go.rb**
+```
+ruby go.rb
+```
 
 Copyright
 ---------
