@@ -20,12 +20,12 @@ puts "RockPaperScissors V0.1.\nMade in Ruby at GlobalGameJam 2014 at Cologne Gam
 # helpers
 def scnclr
 	system "clear" unless system "cls"
+	logo
 end
 
 # the methods
 def askForInput
 	scnclr
-	logo
 	puts "██╗  ██╗███████╗██╗   ██╗     ██╗  ██╗ ██████╗     ███╗   ███╗ █████╗ ████████╗███████╗██╗   ██╗██╗██╗"
 	puts "██║  ██║██╔════╝╚██╗ ██╔╝     ██║  ██║██╔═══██╗    ████╗ ████║██╔══██╗╚══██╔══╝██╔════╝╚██╗ ██╔╝██║██║"
 	puts "███████║█████╗   ╚████╔╝█████╗███████║██║   ██║    ██╔████╔██║███████║   ██║   █████╗   ╚████╔╝ ██║██║"
@@ -82,10 +82,11 @@ def stats
 	puts ""
 	puts ">-----[ I N F o ]-----------------------------------------------------<"
 	puts "   This silly game was made by 'Nodepond'"
-	puts "         at Global Game Jam 2014 at Cologe Game Lab"
+	puts "         for Global Game Jam 2014 at Cologne Game Lab."
 	puts "   It is open sourced and available at github."
-	puts "         Who knows what this game will develop into."
+	puts "         Who knows what this game will develop into!!"
 	puts "   Feel free to contribute!"
+	puts "°'''''°'°'°'''°''°'°''''°''°'''°''°'°''°'°''°'°'°''''°''°'°'°'°'°°°'''°"
 	
 	askForAnotherGame
 end
@@ -112,7 +113,8 @@ def gameOver
 	puts "   It is open sourced and available at github."
 	puts "         Who knows what this game will develop into!!"
 	puts "   Feel free to contribute!"
-
+	puts "°'''''°'°'°'''°''°'°''''°''°'''°''°'°''°'°''°'°'°''''°''°'°'°'°'°°°'''°"
+	
 	puts "Oh you coward, you left the game. No matter what the stats say, now I won!!"
 	puts ""
 end
@@ -135,7 +137,7 @@ def tie
 	puts "██║   ██║██╔══██║╚═╝"
 	puts "╚██████╔╝██║  ██║██╗"
 	puts " ╚═════╝ ╚═╝  ╚═╝╚═╝"
- 	puts "We chose both the same. Let's play again."
+ 	puts "We both chosed the same. Let's play again."
  	@games_tie += 1
  	stats
 end
