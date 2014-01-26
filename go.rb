@@ -1,8 +1,8 @@
+load 'asciiart.rb'
 
 puts "RockPaperScissors V0.1.\nMade in Ruby at GlobalGameJam 2014 at Cologne Game Lab by Martin \"Nodepond\" Wisniowski\n\n"
 
 # font: ANSI shadow / http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=Hey-ho%20matey!!
-# http://stackoverflow.com/questions/9891297/how-do-i-play-mp3-file
 
 @items = Array.new
 @items[0] = "Rock"
@@ -11,6 +11,12 @@ puts "RockPaperScissors V0.1.\nMade in Ruby at GlobalGameJam 2014 at Cologne Gam
 @input = nil
 @game_over = false
 
+@games_played = 0
+@games_won = 0
+@games_lost = 0
+@games_tie = 0
+
+
 # helpers
 def scnclr
 	system "clear" unless system "cls"
@@ -18,6 +24,8 @@ end
 
 # the methods
 def askForInput
+	scnclr
+	logo
 	puts "██╗  ██╗███████╗██╗   ██╗     ██╗  ██╗ ██████╗     ███╗   ███╗ █████╗ ████████╗███████╗██╗   ██╗██╗██╗"
 	puts "██║  ██║██╔════╝╚██╗ ██╔╝     ██║  ██║██╔═══██╗    ████╗ ████║██╔══██╗╚══██╔══╝██╔════╝╚██╗ ██╔╝██║██║"
 	puts "███████║█████╗   ╚████╔╝█████╗███████║██║   ██║    ██╔████╔██║███████║   ██║   █████╗   ╚████╔╝ ██║██║"
@@ -25,8 +33,8 @@ def askForInput
 	puts "██║  ██║███████╗   ██║        ██║  ██║╚██████╔╝    ██║ ╚═╝ ██║██║  ██║   ██║   ███████╗   ██║   ██╗██╗"
 	puts "╚═╝  ╚═╝╚══════╝   ╚═╝        ╚═╝  ╚═╝ ╚═════╝     ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝   ╚═╝   ╚═╝╚═╝"
 
-	puts "Hey-ho Matey! Let's play a game of Rock Paper Scissors!"
-	puts "Please choose:"
+	puts "If you want to pass, you have to win a game of Rock Paper Scissors against me!"
+	puts "So please choose:"
 	puts "Hack 1 for Rock"
 	puts "Type 2 for Paper"
 	puts "Hit 3 for Scissors"
@@ -45,9 +53,67 @@ def askForInputAgain
 	@input = gets.strip
 end
 
+def askForAnotherGame
+	puts ""
+	puts "Do you choose to play again?"
+	puts "Press return to play."
+	puts "Or enter 'coward' to quit"
+	puts ""
+
+	@input = nil
+	@input = gets.strip
+
+	if @input == ""
+		askForInput
+	elsif @input == "coward"
+		@game_over = true
+	end
+			
+end
+
+def stats
+	puts ""
+	puts ">-----[ S T A T S ]---------------------------------------------------<"
+	puts "   Games played: " + @games_played.to_s
+	puts "   Games won: " + @games_won.to_s
+	puts "   Games lost: " + @games_lost.to_s
+	puts "   Games tie: " + @games_tie.to_s
+	puts ""
+	puts ">-----[ I N F o ]-----------------------------------------------------<"
+	puts "   This silly game was made by 'Nodepond'"
+	puts "         at Global Game Jam 2014 at Cologe Game Lab"
+	puts "   It is open sourced and available at github."
+	puts "         Who knows what this game will develop into."
+	puts "   Feel free to contribute!"
+	
+	askForAnotherGame
+end
+
 def gameOver
 	@game_over = true
-	puts "Game Over"
+	scnclr
+	puts " ██████╗  █████╗ ███╗   ███╗███████╗     ██████╗ ██╗   ██╗███████╗██████╗ "
+	puts "██╔════╝ ██╔══██╗████╗ ████║██╔════╝    ██╔═══██╗██║   ██║██╔════╝██╔══██╗"
+	puts "██║  ███╗███████║██╔████╔██║█████╗      ██║   ██║██║   ██║█████╗  ██████╔╝"
+	puts "██║   ██║██╔══██║██║╚██╔╝██║██╔══╝      ██║   ██║╚██╗ ██╔╝██╔══╝  ██╔══██╗"
+	puts "╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗    ╚██████╔╝ ╚████╔╝ ███████╗██║  ██║"
+ 	puts " ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝     ╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═╝"
+ 	puts ""
+	puts ">-----[ S T A T S ]---------------------------------------------------<"
+	puts "   Games played: " + @games_played.to_s
+	puts "   Games won: " + @games_won.to_s
+	puts "   Games lost: " + @games_lost.to_s
+	puts "   Games tie: " + @games_tie.to_s
+	puts ""
+	puts ">-----[ I N F o ]-----------------------------------------------------<"
+	puts "   This silly game was made by 'Nodepond'"
+	puts "         at Global Game Jam 2014 at Cologe Game Lab"
+	puts "   It is open sourced and available at github."
+	puts "         Who knows what this game will develop into."
+	puts "   Feel free to contribute!"
+
+	puts "Oh you coward, you left the game. No matter what the stats say, now I won!!"
+	puts ""
 end
 
 def invalidInput
@@ -69,14 +135,37 @@ def tie
 	puts "╚██████╔╝██║  ██║██╗"
 	puts " ╚═════╝ ╚═╝  ╚═╝╚═╝"
  	puts "We chose both the same. Let's play again."
+ 	@games_tie += 1
+ 	stats
 end
 
 def playerWon
-	puts "Player won"
+	scnclr
+	puts " ██████╗ ██████╗ ███╗   ██╗ ██████╗ ██████╗  █████╗ ████████╗███████╗██╗██╗"
+	puts "██╔════╝██╔═══██╗████╗  ██║██╔════╝ ██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██║██║"
+	puts "██║     ██║   ██║██╔██╗ ██║██║  ███╗██████╔╝███████║   ██║   ███████╗██║██║"
+	puts "██║     ██║   ██║██║╚██╗██║██║   ██║██╔══██╗██╔══██║   ██║   ╚════██║╚═╝╚═╝"
+	puts "╚██████╗╚██████╔╝██║ ╚████║╚██████╔╝██║  ██║██║  ██║   ██║   ███████║██╗██╗"
+	puts " ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝╚═╝"
+    puts ""                                                                       
+	puts "You won!!"
+	@games_won += 1
+	stats
 end
 
 def playerLost
-	puts "Player lost"
+	scnclr
+	puts "██╗  ██╗ █████╗     ██╗  ██╗ █████╗ ██╗"
+	puts "██║  ██║██╔══██╗    ██║  ██║██╔══██╗██║"
+	puts "███████║███████║    ███████║███████║██║"
+	puts "██╔══██║██╔══██║    ██╔══██║██╔══██║╚═╝"
+	puts "██║  ██║██║  ██║    ██║  ██║██║  ██║██╗"
+	puts "╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝"
+	puts ""
+	puts "You lost!"
+	puts ""
+	@games_lost += 1
+	stats
 end
 
 #@items[0] = "Rock"
@@ -97,7 +186,8 @@ end
 def okLetsGamble
 	puts "Ya got the " + @items[@human_played] + "!!"
 	puts "Me chose the " + @items[@computer_played] + "!!"
-
+	@games_played += 1
+	
 	if @human_played == @computer_played
 		tie
 	elsif isWinningCondition?(@human_played, @computer_played)
@@ -105,7 +195,6 @@ def okLetsGamble
 	else
 		playerLost	
 	end
-	gameOver
 end
 
 def isInputOkay?(input)
@@ -117,7 +206,6 @@ scnclr
 askForInput
 
 until (@game_over)
-	puts @game_over
 	if isInputOkay?(@input)
 		invalidInput
 	else
@@ -126,3 +214,5 @@ until (@game_over)
 		okLetsGamble
 	end
 end
+gameOver
+
