@@ -130,7 +130,6 @@ def playComputer
 end
 
 def tie
-	scnclr
 	puts " ██████╗ ██╗  ██╗██╗"
 	puts "██╔═══██╗██║  ██║██║"
 	puts "██║   ██║███████║██║"
@@ -143,7 +142,6 @@ def tie
 end
 
 def playerWon
-	scnclr
 	puts " ██████╗ ██████╗ ███╗   ██╗ ██████╗ ██████╗  █████╗ ████████╗███████╗██╗██╗"
 	puts "██╔════╝██╔═══██╗████╗  ██║██╔════╝ ██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██║██║"
 	puts "██║     ██║   ██║██╔██╗ ██║██║  ███╗██████╔╝███████║   ██║   ███████╗██║██║"
@@ -157,7 +155,6 @@ def playerWon
 end
 
 def playerLost
-	scnclr
 	puts "██╗  ██╗ █████╗     ██╗  ██╗ █████╗ ██╗"
 	puts "██║  ██║██╔══██╗    ██║  ██║██╔══██╗██║"
 	puts "███████║███████║    ███████║███████║██║"
@@ -187,8 +184,10 @@ def isWinningCondition?(human, computer)
 end
 
 def okLetsGamble
+	scnclr
 	puts "Ya got the " + @items[@human_played] + "!!"
 	puts "Me chose the " + @items[@computer_played] + "!!"
+	puts ""
 	@games_played += 1
 	
 	if @human_played == @computer_played
