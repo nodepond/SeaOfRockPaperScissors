@@ -243,6 +243,15 @@ end
 
 def okLetsGamble
 	scnclr
+
+	if @input == 1.to_s or @input == 'Rock'
+		@human_played = 0
+	elsif @input == 2.to_s or @input == "Paper"
+		@human_played = 1
+	elsif @input == 3.to_s or @input == "Scissors"
+		@human_played = 2
+	end
+	
 	puts "Ya got the " + @items[@human_played] + "!! " + "Me chose the " + @items[@computer_played] + "!!"
 	puts ""
 	@games_played += 1
@@ -256,8 +265,19 @@ def okLetsGamble
 	end
 end
 
-def isInputOkay?(input)
-	return (input != 1.to_s and input != 2.to_s and input != 3.to_s)
+def isInputOkay?
+
+	okay = false
+
+	if (@input == 1)
+		okay = true
+	elsif (@input == 2)
+		okay = true
+	elsif (@input == 3)
+		okay = true
+	end
+
+	return okay
 end
 
 # the "main"
@@ -265,10 +285,9 @@ scnclr
 askForInput
 
 until (@game_over)
-	if isInputOkay?(@input)
+	if isInputOkay?
 		invalidInput
 	else
-		@human_played = @input.to_i - 1
 		playComputer
 		okLetsGamble
 	end
