@@ -33,7 +33,8 @@ def askForInput
 	puts "██║  ██║███████╗   ██║        ██║  ██║╚██████╔╝    ██║ ╚═╝ ██║██║  ██║   ██║   ███████╗   ██║   ██╗██╗"
 	puts "╚═╝  ╚═╝╚══════╝   ╚═╝        ╚═╝  ╚═╝ ╚═════╝     ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝   ╚═╝   ╚═╝╚═╝"
 
-	puts "If you want to pass, you have to win a game of Rock Paper Scissors against me!"
+	puts "If you want to pass, you have to win a game of Rock, Paper, Scissors against me!"
+	puts ""
 	puts "So please choose:"
 	puts "Hack 1 for Rock"
 	puts "Type 2 for Paper"
@@ -107,9 +108,9 @@ def gameOver
 	puts ""
 	puts ">-----[ I N F o ]-----------------------------------------------------<"
 	puts "   This silly game was made by 'Nodepond'"
-	puts "         at Global Game Jam 2014 at Cologe Game Lab"
+	puts "         for Global Game Jam 2014 at Cologne Game Lab."
 	puts "   It is open sourced and available at github."
-	puts "         Who knows what this game will develop into."
+	puts "         Who knows what this game will develop into!!"
 	puts "   Feel free to contribute!"
 
 	puts "Oh you coward, you left the game. No matter what the stats say, now I won!!"
