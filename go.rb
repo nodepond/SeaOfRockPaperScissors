@@ -169,7 +169,7 @@ def playerWon
 	puts "You won!!"
 
 	puts ""                                                                       
-	puts "Please tell me what you need in order to succeed?"
+	puts "Please tell me what you need in order to succeed? (Or just return to idle)"
 	succeed = gets.strip
 	if succeed == ""
 		# skip this
