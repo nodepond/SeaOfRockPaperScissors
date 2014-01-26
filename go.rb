@@ -197,11 +197,11 @@ def playerWon
 		puts ""
 		puts ">-----[ Y O U   S A Y ]-----------------------------------------------<"
 		puts "   "
-		puts "   'If you want to be a wise person, you will need more " + @user_wisdoms_more[rnd]
+		puts "   'If you want to get wise, you will need more " + @user_wisdoms_more[rnd]
 		puts "       while trying to avoid " + @user_wisdoms_less[rnd]+"."
 		puts ""
 	end
-	
+
 	@games_won += 1
 	stats
 end
