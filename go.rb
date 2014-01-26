@@ -128,9 +128,9 @@ def gameOver
 	puts ">-----[ I N F o ]-----------------------------------------------------<"
 	puts "   This silly game was made by 'Nodepond'"
 	puts "         for Global Game Jam 2014 at Cologne Game Lab."
-	puts "   It is open sourced and available at github."
-	puts "         Who knows what this game will develop into!!"
-	puts "   Feel free to contribute!"
+	puts "   It is open sourced and available at github:"
+	puts "         https://github.com/nodepond/SeaOfRockPaperScissors"
+	puts "   Feel free to contribute! Who knows what this game will develop into!"
 	#puts "°'''''°'°'°'''°''°'°''''°''°'''°''°'°''°'°''°'°'°''''°''°'°'°'°'°°°'''°"
 	
 	puts ""
