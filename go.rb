@@ -10,6 +10,7 @@ puts "RockPaperScissors V0.1.\nMade in Ruby at GlobalGameJam 2014 at Cologne Gam
 @items[2] = "Scissors"
 @input = nil
 @game_over = false
+@gameover_condition = ""
 
 @games_played = 0
 @games_won = 0
@@ -56,8 +57,7 @@ end
 
 def askForAnotherGame
 	puts ""
-	puts "Do you choose to play again?"
-	puts "Press return to play."
+	puts "Do you choose to play again? Press return to play."
 	puts "Or enter 'coward' to quit"
 	puts ""
 
@@ -67,6 +67,16 @@ def askForAnotherGame
 	if @input == ""
 		askForInput
 	elsif @input == "coward"
+		@gameover_condition = "coward"
+		@game_over = true
+	elsif @input == "head for treasure"
+		@gameover_condition = "treasure"
+		@game_over = true
+	elsif @input == "swordfight"
+		@gameover_condition = "swordfight"
+		@game_over = true
+	elsif @input == "go stealing"
+		@gameover_condition = "steal"
 		@game_over = true
 	end
 			
@@ -86,7 +96,7 @@ def stats
 	puts "   It is open sourced and available at github."
 	puts "         Who knows what this game will develop into!!"
 	puts "   Feel free to contribute!"
-	puts "°'''''°'°'°'''°''°'°''''°''°'''°''°'°''°'°''°'°'°''''°''°'°'°'°'°°°'''°"
+	#puts "°'''''°'°'°'''°''°'°''''°''°'''°''°'°''°'°''°'°'°''''°''°'°'°'°'°°°'''°"
 	
 	askForAnotherGame
 end
@@ -94,6 +104,19 @@ end
 def gameOver
 	@game_over = true
 	scnclr
+
+	if @gameover_condition == "coward"
+		puts "Oh you coward, you left the game. No matter what the stats say, now I won!!"
+	elsif @gameover_condition == "treasure"
+		puts "Excellent matey! Let's stop this silly game and go out to find some precious loot!!"
+	elsif @gameover_condition == "swordfight"
+		puts "So you want to fight a pirate like me? Here's my sword!"
+	elsif @gameover_condition == "steal"
+		puts "(You stole a bottle of rum from the pirate.)"
+	end
+	puts ""
+	
+
 	puts " ██████╗  █████╗ ███╗   ███╗███████╗     ██████╗ ██╗   ██╗███████╗██████╗ "
 	puts "██╔════╝ ██╔══██╗████╗ ████║██╔════╝    ██╔═══██╗██║   ██║██╔════╝██╔══██╗"
 	puts "██║  ███╗███████║██╔████╔██║█████╗      ██║   ██║██║   ██║█████╗  ██████╔╝"
@@ -113,9 +136,8 @@ def gameOver
 	puts "   It is open sourced and available at github."
 	puts "         Who knows what this game will develop into!!"
 	puts "   Feel free to contribute!"
-	puts "°'''''°'°'°'''°''°'°''''°''°'''°''°'°''°'°''°'°'°''''°''°'°'°'°'°°°'''°"
+	#puts "°'''''°'°'°'''°''°'°''''°''°'''°''°'°''°'°''°'°'°''''°''°'°'°'°'°°°'''°"
 	
-	puts "Oh you coward, you left the game. No matter what the stats say, now I won!!"
 	puts ""
 end
 
@@ -185,8 +207,7 @@ end
 
 def okLetsGamble
 	scnclr
-	puts "Ya got the " + @items[@human_played] + "!!"
-	puts "Me chose the " + @items[@computer_played] + "!!"
+	puts "Ya got the " + @items[@human_played] + "!! " + "Me chose the " + @items[@computer_played] + "!!"
 	puts ""
 	@games_played += 1
 	
