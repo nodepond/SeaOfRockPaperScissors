@@ -28,11 +28,11 @@ end
 # the methods
 def askForInput
 	scnclr
-	puts "██_  ██_███████_██_   ██_     ██_  ██_ ██████_     ███_   ███_ █████_ ████████_███████_██_   ██_██_██_"
-	puts "██_  ██_██______██_  ██__     ██_  ██_██____██_    ████_ ████_██___██____██____██_______██_ ██__██_██_"
-	puts "███████_█████_   _████__█████_███████_██_   ██_    ██_████_██_███████_   ██_   █████_   _████__ ██_██_"
-	puts "██___██_██____    _██__ ______██___██_██_   ██_    ██__██__██_██___██_   ██_   ██____    _██__  ______"
-	puts "██_  ██_███████_   ██_        ██_  ██__██████__    ██_ ___ ██_██_  ██_   ██_   ███████_   ██_   ██_██_"
+	puts "OO_  OO_OOOOOOO_OO_   OO_     OO_  OO_ OOOOOO_     OOO_   OOO_ OOOOO_ OOOOOOOO_OOOOOOO_OO_   OO_OO_OO_"
+	puts "OO_  OO_OO______OO_  OO__     OO_  OO_OO____OO_    OOOO_ OOOO_OO___OO____OO____OO_______OO_ OO__OO_OO_"
+	puts "OOOOOOO_OOOOO_   _OOOO__OOOOO_OOOOOOO_OO_   OO_    OO_OOOO_OO_OOOOOOO_   OO_   OOOOO_   _OOOO__ OO_OO_"
+	puts "OO___OO_OO____    _OO__ ______OO___OO_OO_   OO_    OO__OO__OO_OO___OO_   OO_   OO____    _OO__  ______"
+	puts "OO_  OO_OOOOOOO_   OO_        OO_  OO__OOOOOO__    OO_ ___ OO_OO_  OO_   OO_   OOOOOOO_   OO_   OO_OO_"
 	puts "___  ___________   ___        ___  ___ _______     ___     ______  ___   ___   ________   ___   ______"
 
 	puts "If you want to pass, you have to win a game of Rock, Paper, Scissors against me!"
@@ -112,11 +112,11 @@ def gameOver
 	puts ""
 	
 
-	puts " ██████╗  █████╗ ███╗   ███╗███████╗     ██████╗ ██╗   ██╗███████╗██████╗ "
-	puts "██╔════╝ ██╔══██╗████╗ ████║██╔════╝    ██╔═══██╗██║   ██║██╔════╝██╔══██╗"
-	puts "██║  ███╗███████║██╔████╔██║█████╗      ██║   ██║██║   ██║█████╗  ██████╔╝"
-	puts "██║   ██║██╔══██║██║╚██╔╝██║██╔══╝      ██║   ██║╚██╗ ██╔╝██╔══╝  ██╔══██╗"
-	puts "╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗    ╚██████╔╝ ╚████╔╝ ███████╗██║  ██║"
+	puts " OOOOOO╗  OOOOO╗ OOO╗   OOO╗OOOOOOO╗     OOOOOO╗ OO╗   OO╗OOOOOOO╗OOOOOO╗ "
+	puts "OO╔════╝ OO╔══OO╗OOOO╗ OOOO║OO╔════╝    OO╔═══OO╗OO║   OO║OO╔════╝OO╔══OO╗"
+	puts "OO║  OOO╗OOOOOOO║OO╔OOOO╔OO║OOOOO╗      OO║   OO║OO║   OO║OOOOO╗  OOOOOO╔╝"
+	puts "OO║   OO║OO╔══OO║OO║╚OO╔╝OO║OO╔══╝      OO║   OO║╚OO╗ OO╔╝OO╔══╝  OO╔══OO╗"
+	puts "╚OOOOOO╔╝OO║  OO║OO║ ╚═╝ OO║OOOOOOO╗    ╚OOOOOO╔╝ ╚OOOO╔╝ OOOOOOO╗OO║  OO║"
  	puts " ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝     ╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═╝"
  	puts ""
 	puts ">-----[ S T A T S ]---------------------------------------------------<"
@@ -147,11 +147,11 @@ def playComputer
 end
 
 def tie
-	puts " ██████╗ ██╗  ██╗██╗"
-	puts "██╔═══██╗██║  ██║██║"
-	puts "██║   ██║███████║██║"
-	puts "██║   ██║██╔══██║╚═╝"
-	puts "╚██████╔╝██║  ██║██╗"
+	puts " OOOOOO╗ OO╗  OO╗OO╗"
+	puts "OO╔═══OO╗OO║  OO║OO║"
+	puts "OO║   OO║OOOOOOO║OO║"
+	puts "OO║   OO║OO╔══OO║╚═╝"
+	puts "╚OOOOOO╔╝OO║  OO║OO╗"
 	puts " ╚═════╝ ╚═╝  ╚═╝╚═╝"
  	puts "We both chosed the same. Let's play again."
  	@games_tie += 1
@@ -159,11 +159,11 @@ def tie
 end
 
 def playerWon
-	puts " ██████╗ ██████╗ ███╗   ██╗ ██████╗ ██████╗  █████╗ ████████╗███████╗██╗██╗"
-	puts "██╔════╝██╔═══██╗████╗  ██║██╔════╝ ██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██║██║"
-	puts "██║     ██║   ██║██╔██╗ ██║██║  ███╗██████╔╝███████║   ██║   ███████╗██║██║"
-	puts "██║     ██║   ██║██║╚██╗██║██║   ██║██╔══██╗██╔══██║   ██║   ╚════██║╚═╝╚═╝"
-	puts "╚██████╗╚██████╔╝██║ ╚████║╚██████╔╝██║  ██║██║  ██║   ██║   ███████║██╗██╗"
+	puts " OOOOOO╗ OOOOOO╗ OOO╗   OO╗ OOOOOO╗ OOOOOO╗  OOOOO╗ OOOOOOOO╗OOOOOOO╗OO╗OO╗"
+	puts "OO╔════╝OO╔═══OO╗OOOO╗  OO║OO╔════╝ OO╔══OO╗OO╔══OO╗╚══OO╔══╝OO╔════╝OO║OO║"
+	puts "OO║     OO║   OO║OO╔OO╗ OO║OO║  OOO╗OOOOOO╔╝OOOOOOO║   OO║   OOOOOOO╗OO║OO║"
+	puts "OO║     OO║   OO║OO║╚OO╗OO║OO║   OO║OO╔══OO╗OO╔══OO║   OO║   ╚════OO║╚═╝╚═╝"
+	puts "╚OOOOOO╗╚OOOOOO╔╝OO║ ╚OOOO║╚OOOOOO╔╝OO║  OO║OO║  OO║   OO║   OOOOOOO║OO╗OO╗"
 	puts " ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝╚═╝"
     puts ""                                                                       
 	puts "You won!!"
@@ -183,11 +183,11 @@ def playerWon
 
 
 	scnclr
-	puts " ██████╗ ██████╗ ███╗   ██╗ ██████╗ ██████╗  █████╗ ████████╗███████╗██╗██╗"
-	puts "██╔════╝██╔═══██╗████╗  ██║██╔════╝ ██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██║██║"
-	puts "██║     ██║   ██║██╔██╗ ██║██║  ███╗██████╔╝███████║   ██║   ███████╗██║██║"
-	puts "██║     ██║   ██║██║╚██╗██║██║   ██║██╔══██╗██╔══██║   ██║   ╚════██║╚═╝╚═╝"
-	puts "╚██████╗╚██████╔╝██║ ╚████║╚██████╔╝██║  ██║██║  ██║   ██║   ███████║██╗██╗"
+	puts " OOOOOO╗ OOOOOO╗ OOO╗   OO╗ OOOOOO╗ OOOOOO╗  OOOOO╗ OOOOOOOO╗OOOOOOO╗OO╗OO╗"
+	puts "OO╔════╝OO╔═══OO╗OOOO╗  OO║OO╔════╝ OO╔══OO╗OO╔══OO╗╚══OO╔══╝OO╔════╝OO║OO║"
+	puts "OO║     OO║   OO║OO╔OO╗ OO║OO║  OOO╗OOOOOO╔╝OOOOOOO║   OO║   OOOOOOO╗OO║OO║"
+	puts "OO║     OO║   OO║OO║╚OO╗OO║OO║   OO║OO╔══OO╗OO╔══OO║   OO║   ╚════OO║╚═╝╚═╝"
+	puts "╚OOOOOO╗╚OOOOOO╔╝OO║ ╚OOOO║╚OOOOOO╔╝OO║  OO║OO║  OO║   OO║   OOOOOOO║OO╗OO╗"
 	puts " ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝╚═╝"
     puts ""                                                                       
 	puts "You won!!"
@@ -207,11 +207,11 @@ def playerWon
 end
 
 def playerLost
-	puts "██╗  ██╗ █████╗     ██╗  ██╗ █████╗ ██╗"
-	puts "██║  ██║██╔══██╗    ██║  ██║██╔══██╗██║"
-	puts "███████║███████║    ███████║███████║██║"
-	puts "██╔══██║██╔══██║    ██╔══██║██╔══██║╚═╝"
-	puts "██║  ██║██║  ██║    ██║  ██║██║  ██║██╗"
+	puts "OO╗  OO╗ OOOOO╗     OO╗  OO╗ OOOOO╗ OO╗"
+	puts "OO║  OO║OO╔══OO╗    OO║  OO║OO╔══OO╗OO║"
+	puts "OOOOOOO║OOOOOOO║    OOOOOOO║OOOOOOO║OO║"
+	puts "OO╔══OO║OO╔══OO║    OO╔══OO║OO╔══OO║╚═╝"
+	puts "OO║  OO║OO║  OO║    OO║  OO║OO║  OO║OO╗"
 	puts "╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝"
 	puts ""
 	puts "You lost!"
