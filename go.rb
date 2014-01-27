@@ -1,9 +1,11 @@
 load 'asciiart.rb'
 load 'talkengine.rb'
 
-puts "RockPaperScissors V0.1.\nMade in Ruby at GlobalGameJam 2014 at Cologne Game Lab by Martin \"Nodepond\" Wisniowski\n\n"
-
 # font: ANSI shadow / http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=Hey-ho%20matey!!
+# http://www.kammerl.de/ascii/AsciiSignature.php
+# colossal smpoison/sblood kban shimrod nancyi-improved nancyi
+
+puts "RockPaperScissors V0.1.\nMade in Ruby at GlobalGameJam 2014 at Cologne Game Lab by Martin \"Nodepond\" Wisniowski\n\n"
 
 @items = Array.new
 @items[0] = "Rock"
@@ -28,13 +30,15 @@ end
 # the methods
 def askForInput
 	scnclr
-	puts "OO_  OO_OOOOOOO_OO_   OO_     OO_  OO_ OOOOOO_     OOO_   OOO_ OOOOO_ OOOOOOOO_OOOOOOO_OO_   OO_OO_OO_"
-	puts "OO_  OO_OO______OO_  OO__     OO_  OO_OO____OO_    OOOO_ OOOO_OO___OO____OO____OO_______OO_ OO__OO_OO_"
-	puts "OOOOOOO_OOOOO_   _OOOO__OOOOO_OOOOOOO_OO_   OO_    OO_OOOO_OO_OOOOOOO_   OO_   OOOOO_   _OOOO__ OO_OO_"
-	puts "OO___OO_OO____    _OO__ ______OO___OO_OO_   OO_    OO__OO__OO_OO___OO_   OO_   OO____    _OO__  ______"
-	puts "OO_  OO_OOOOOOO_   OO_        OO_  OO__OOOOOO__    OO_ ___ OO_OO_  OO_   OO_   OOOOOOO_   OO_   OO_OO_"
-	puts "___  ___________   ___        ___  ___ _______     ___     ______  ___   ___   ________   ___   ______"
-
+	puts "dP     dP                             dP                   8888ba.88ba             dP                     dP dP"
+	puts "88     88                             88                   88  `8b  `8b            88                     88 88"
+	puts "88aaaaa88a .d8888b. dP    dP          88d888b. .d8888b.    88   88   88 .d8888b. d8888P .d8888b. dP    dP 88 88"
+	puts "88     88  88ooood8 88    88 88888888 88'  `88 88'  `88    88   88   88 88'  `88   88   88ooood8 88    88 dP dP"
+	puts "88     88  88.  ... 88.  .88          88    88 88.  .88    88   88   88 88.  .88   88   88.  ... 88.  .88      "
+	puts "dP     dP  `88888P' `8888P88          dP    dP `88888P'    dP   dP   dP `88888P8   dP   `88888P' `8888P88 oo oo"
+	puts "                         .88                                                                          .88      "
+	puts "                     d8888P                                                                       d8888P       "
+	puts ""
 	puts "If you want to pass, you have to win a game of Rock, Paper, Scissors against me!"
 	puts ""
 	puts "So please choose:"
@@ -112,13 +116,13 @@ def gameOver
 	puts ""
 	
 
-	puts " OOOOOO_  OOOOO_ OOO_   OOO_OOOOOOO_     OOOOOO_ OO_   OO_OOOOOOO_OOOOOO_ "
-	puts "OO______ OO___OO_OOOO_ OOOO_OO______    OO____OO_OO_   OO_OO______OO___OO_"
-	puts "OO_  OOO_OOOOOOO_OO_OOOO_OO_OOOOO_      OO_   OO_OO_   OO_OOOOO_  OOOOOO__"
-	puts "OO_   OO_OO___OO_OO__OO__OO_OO____      OO_   OO__OO_ OO__OO____  OO___OO_"
-	puts "_OOOOOO__OO_  OO_OO_ ___ OO_OOOOOOO_    _OOOOOO__ _OOOO__ OOOOOOO_OO_  OO_"
- 	puts " _______ ___  ______     ___________     _______   _____  ___________  ___"
- 	puts ""
+	puts " .88888."                                                                     
+	puts "d8'   `88"                                                                    
+	puts "88        .d8888b. 88d8b.d8b. .d8888b.    .d8888b. dP   .dP .d8888b. 88d888b."
+	puts "88   YP88 88'  `88 88'`88'`88 88ooood8    88'  `88 88   d8' 88ooood8 88'  `88"
+	puts "Y8.   .88 88.  .88 88  88  88 88.  ...    88.  .88 88 .88'  88.  ... 88      "
+ 	puts " `88888'  `88888P8 dP  dP  dP `88888P'    `88888P' 8888P'   `88888P' dP      "
+  	puts ""
 	puts ">-----[ S T A T S ]---------------------------------------------------<"
 	puts "   Games played: " + @games_played.to_s
 	puts "   Games won: " + @games_won.to_s
@@ -147,24 +151,27 @@ def playComputer
 end
 
 def tie
-	puts " OOOOOO_ OO_  OO_OO_"
-	puts "OO____OO_OO_  OO_OO_"
-	puts "OO_   OO_OOOOOOO_OO_"
-	puts "OO_   OO_OO___OO____"
-	puts "_OOOOOO__OO_  OO_OO_"
-	puts " _______ ___  ______"
+	puts " .88888.  dP     dP  dP"
+	puts "d8'   `8b 88     88  88"
+	puts "88     88 88aaaaa88  88"
+	puts "88     88 88     88  dP"
+	puts "Y8.   .8P 88     88    "
+	puts " `8888P'  dP     dP  oo"
+ 	puts ""
  	puts "We both chosed the same. Let's play again."
  	@games_tie += 1
  	stats
 end
 
 def playerWon
-	puts " OOOOOO_ OOOOOO_ OOO_   OO_ OOOOOO_ OOOOOO_  OOOOO_ OOOOOOOO_OOOOOOO_OO_OO_"
-	puts "OO______OO____OO_OOOO_  OO_OO______ OO___OO_OO___OO____OO____OO______OO_OO_"
-	puts "OO_     OO_   OO_OO_OO_ OO_OO_  OOO_OOOOOO__OOOOOOO_   OO_   OOOOOOO_OO_OO_"
-	puts "OO_     OO_   OO_OO__OO_OO_OO_   OO_OO___OO_OO___OO_   OO_   _____OO_______"
-	puts "_OOOOOO__OOOOOO__OO_ _OOOO__OOOOOO__OO_  OO_OO_  OO_   OO_   OOOOOOO_OO_OO_"
-	puts " _______ _______ ___  _____ _______ ___  ______  ___   ___   ______________"
+	puts " a88888b.                                                dP            dP"
+    puts "d8'   `88                                                88            88"
+    puts "88        .d8888b. 88d888b. .d8888b. 88d888b. .d8888b. d8888P .d8888b. 88"
+    puts "88        88'  `88 88'  `88 88'  `88 88'  `88 88'  `88   88   Y8ooooo. dP"
+    puts "Y8.   .88 88.  .88 88    88 88.  .88 88       88.  .88   88         88   "
+    puts " Y88888P' `88888P' dP    dP `8888P88 dP       `88888P8   dP   `88888P' oo"
+    puts "                                 .88                                     "
+    puts "                             d8888P"
     puts ""                                                                       
 	puts "You won!!"
 
@@ -183,12 +190,14 @@ def playerWon
 
 
 	scnclr
-	puts " OOOOOO_ OOOOOO_ OOO_   OO_ OOOOOO_ OOOOOO_  OOOOO_ OOOOOOOO_OOOOOOO_OO_OO_"
-	puts "OO______OO____OO_OOOO_  OO_OO______ OO___OO_OO___OO____OO____OO______OO_OO_"
-	puts "OO_     OO_   OO_OO_OO_ OO_OO_  OOO_OOOOOO__OOOOOOO_   OO_   OOOOOOO_OO_OO_"
-	puts "OO_     OO_   OO_OO__OO_OO_OO_   OO_OO___OO_OO___OO_   OO_   _____OO_______"
-	puts "_OOOOOO__OOOOOO__OO_ _OOOO__OOOOOO__OO_  OO_OO_  OO_   OO_   OOOOOOO_OO_OO_"
-	puts " _______ _______ ___  _____ _______ ___  ______  ___   ___   ______________"
+	puts " a88888b.                                                dP            dP"
+    puts "d8'   `88                                                88            88"
+    puts "88        .d8888b. 88d888b. .d8888b. 88d888b. .d8888b. d8888P .d8888b. 88"
+    puts "88        88'  `88 88'  `88 88'  `88 88'  `88 88'  `88   88   Y8ooooo. dP"
+    puts "Y8.   .88 88.  .88 88    88 88.  .88 88       88.  .88   88         88   "
+    puts " Y88888P' `88888P' dP    dP `8888P88 dP       `88888P8   dP   `88888P' oo"
+    puts "                                 .88                                     "
+    puts "                             d8888P"
     puts ""                                                                       
 	puts "You won!!"
 
@@ -207,12 +216,12 @@ def playerWon
 end
 
 def playerLost
-	puts "OO_  OO_ OOOOO_     OO_  OO_ OOOOO_ OO_"
-	puts "OO_  OO_OO___OO_    OO_  OO_OO___OO_OO_"
-	puts "OOOOOOO_OOOOOOO_    OOOOOOO_OOOOOOO_OO_"
-	puts "OO___OO_OO___OO_    OO___OO_OO___OO____"
-	puts "OO_  OO_OO_  OO_    OO_  OO_OO_  OO_OO_"
-	puts "___  ______  ___    ___  ______  ______"
+	puts "dP     dP              dP     dP           dP"
+	puts "88     88              88     88           88"
+	puts "88aaaaa88a .d8888b.    88aaaaa88a .d8888b. 88"
+	puts "88     88  88'  `88    88     88  88'  `88 dP"
+	puts "88     88  88.  .88    88     88  88.  .88   "
+	puts "dP     dP  `88888P8    dP     dP  `88888P8 oo"
 	puts ""
 	puts "You lost!"
 	rnd = rand(@computer_wisdoms.length)

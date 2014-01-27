@@ -10,5 +10,6 @@
 	"The road of excess leads to the palace of wisdom.",
 	"A good head and a good heart are always a formidable combination.",
 	"I'd rather regret the things I've done than regret the things I haven't done.",
-	"Wisdom begins in wonder."
+	"Wisdom begins in wonder.",
+	"If people are angry, they want to change something."
 	]
