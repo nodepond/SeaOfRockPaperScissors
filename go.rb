@@ -112,12 +112,12 @@ def gameOver
 	puts ""
 	
 
-	puts " OOOOOO╗  OOOOO╗ OOO╗   OOO╗OOOOOOO╗     OOOOOO╗ OO╗   OO╗OOOOOOO╗OOOOOO╗ "
-	puts "OO╔════╝ OO╔══OO╗OOOO╗ OOOO║OO╔════╝    OO╔═══OO╗OO║   OO║OO╔════╝OO╔══OO╗"
-	puts "OO║  OOO╗OOOOOOO║OO╔OOOO╔OO║OOOOO╗      OO║   OO║OO║   OO║OOOOO╗  OOOOOO╔╝"
-	puts "OO║   OO║OO╔══OO║OO║╚OO╔╝OO║OO╔══╝      OO║   OO║╚OO╗ OO╔╝OO╔══╝  OO╔══OO╗"
-	puts "╚OOOOOO╔╝OO║  OO║OO║ ╚═╝ OO║OOOOOOO╗    ╚OOOOOO╔╝ ╚OOOO╔╝ OOOOOOO╗OO║  OO║"
- 	puts " ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝     ╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═╝"
+	puts " OOOOOO_  OOOOO_ OOO_   OOO_OOOOOOO_     OOOOOO_ OO_   OO_OOOOOOO_OOOOOO_ "
+	puts "OO______ OO___OO_OOOO_ OOOO_OO______    OO____OO_OO_   OO_OO______OO___OO_"
+	puts "OO_  OOO_OOOOOOO_OO_OOOO_OO_OOOOO_      OO_   OO_OO_   OO_OOOOO_  OOOOOO__"
+	puts "OO_   OO_OO___OO_OO__OO__OO_OO____      OO_   OO__OO_ OO__OO____  OO___OO_"
+	puts "_OOOOOO__OO_  OO_OO_ ___ OO_OOOOOOO_    _OOOOOO__ _OOOO__ OOOOOOO_OO_  OO_"
+ 	puts " _______ ___  ______     ___________     _______   _____  ___________  ___"
  	puts ""
 	puts ">-----[ S T A T S ]---------------------------------------------------<"
 	puts "   Games played: " + @games_played.to_s
@@ -147,24 +147,24 @@ def playComputer
 end
 
 def tie
-	puts " OOOOOO╗ OO╗  OO╗OO╗"
-	puts "OO╔═══OO╗OO║  OO║OO║"
-	puts "OO║   OO║OOOOOOO║OO║"
-	puts "OO║   OO║OO╔══OO║╚═╝"
-	puts "╚OOOOOO╔╝OO║  OO║OO╗"
-	puts " ╚═════╝ ╚═╝  ╚═╝╚═╝"
+	puts " OOOOOO_ OO_  OO_OO_"
+	puts "OO____OO_OO_  OO_OO_"
+	puts "OO_   OO_OOOOOOO_OO_"
+	puts "OO_   OO_OO___OO____"
+	puts "_OOOOOO__OO_  OO_OO_"
+	puts " _______ ___  ______"
  	puts "We both chosed the same. Let's play again."
  	@games_tie += 1
  	stats
 end
 
 def playerWon
-	puts " OOOOOO╗ OOOOOO╗ OOO╗   OO╗ OOOOOO╗ OOOOOO╗  OOOOO╗ OOOOOOOO╗OOOOOOO╗OO╗OO╗"
-	puts "OO╔════╝OO╔═══OO╗OOOO╗  OO║OO╔════╝ OO╔══OO╗OO╔══OO╗╚══OO╔══╝OO╔════╝OO║OO║"
-	puts "OO║     OO║   OO║OO╔OO╗ OO║OO║  OOO╗OOOOOO╔╝OOOOOOO║   OO║   OOOOOOO╗OO║OO║"
-	puts "OO║     OO║   OO║OO║╚OO╗OO║OO║   OO║OO╔══OO╗OO╔══OO║   OO║   ╚════OO║╚═╝╚═╝"
-	puts "╚OOOOOO╗╚OOOOOO╔╝OO║ ╚OOOO║╚OOOOOO╔╝OO║  OO║OO║  OO║   OO║   OOOOOOO║OO╗OO╗"
-	puts " ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝╚═╝"
+	puts " OOOOOO_ OOOOOO_ OOO_   OO_ OOOOOO_ OOOOOO_  OOOOO_ OOOOOOOO_OOOOOOO_OO_OO_"
+	puts "OO______OO____OO_OOOO_  OO_OO______ OO___OO_OO___OO____OO____OO______OO_OO_"
+	puts "OO_     OO_   OO_OO_OO_ OO_OO_  OOO_OOOOOO__OOOOOOO_   OO_   OOOOOOO_OO_OO_"
+	puts "OO_     OO_   OO_OO__OO_OO_OO_   OO_OO___OO_OO___OO_   OO_   _____OO_______"
+	puts "_OOOOOO__OOOOOO__OO_ _OOOO__OOOOOO__OO_  OO_OO_  OO_   OO_   OOOOOOO_OO_OO_"
+	puts " _______ _______ ___  _____ _______ ___  ______  ___   ___   ______________"
     puts ""                                                                       
 	puts "You won!!"
 
@@ -183,12 +183,12 @@ def playerWon
 
 
 	scnclr
-	puts " OOOOOO╗ OOOOOO╗ OOO╗   OO╗ OOOOOO╗ OOOOOO╗  OOOOO╗ OOOOOOOO╗OOOOOOO╗OO╗OO╗"
-	puts "OO╔════╝OO╔═══OO╗OOOO╗  OO║OO╔════╝ OO╔══OO╗OO╔══OO╗╚══OO╔══╝OO╔════╝OO║OO║"
-	puts "OO║     OO║   OO║OO╔OO╗ OO║OO║  OOO╗OOOOOO╔╝OOOOOOO║   OO║   OOOOOOO╗OO║OO║"
-	puts "OO║     OO║   OO║OO║╚OO╗OO║OO║   OO║OO╔══OO╗OO╔══OO║   OO║   ╚════OO║╚═╝╚═╝"
-	puts "╚OOOOOO╗╚OOOOOO╔╝OO║ ╚OOOO║╚OOOOOO╔╝OO║  OO║OO║  OO║   OO║   OOOOOOO║OO╗OO╗"
-	puts " ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝╚═╝"
+	puts " OOOOOO_ OOOOOO_ OOO_   OO_ OOOOOO_ OOOOOO_  OOOOO_ OOOOOOOO_OOOOOOO_OO_OO_"
+	puts "OO______OO____OO_OOOO_  OO_OO______ OO___OO_OO___OO____OO____OO______OO_OO_"
+	puts "OO_     OO_   OO_OO_OO_ OO_OO_  OOO_OOOOOO__OOOOOOO_   OO_   OOOOOOO_OO_OO_"
+	puts "OO_     OO_   OO_OO__OO_OO_OO_   OO_OO___OO_OO___OO_   OO_   _____OO_______"
+	puts "_OOOOOO__OOOOOO__OO_ _OOOO__OOOOOO__OO_  OO_OO_  OO_   OO_   OOOOOOO_OO_OO_"
+	puts " _______ _______ ___  _____ _______ ___  ______  ___   ___   ______________"
     puts ""                                                                       
 	puts "You won!!"
 
@@ -207,12 +207,12 @@ def playerWon
 end
 
 def playerLost
-	puts "OO╗  OO╗ OOOOO╗     OO╗  OO╗ OOOOO╗ OO╗"
-	puts "OO║  OO║OO╔══OO╗    OO║  OO║OO╔══OO╗OO║"
-	puts "OOOOOOO║OOOOOOO║    OOOOOOO║OOOOOOO║OO║"
-	puts "OO╔══OO║OO╔══OO║    OO╔══OO║OO╔══OO║╚═╝"
-	puts "OO║  OO║OO║  OO║    OO║  OO║OO║  OO║OO╗"
-	puts "╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝"
+	puts "OO_  OO_ OOOOO_     OO_  OO_ OOOOO_ OO_"
+	puts "OO_  OO_OO___OO_    OO_  OO_OO___OO_OO_"
+	puts "OOOOOOO_OOOOOOO_    OOOOOOO_OOOOOOO_OO_"
+	puts "OO___OO_OO___OO_    OO___OO_OO___OO____"
+	puts "OO_  OO_OO_  OO_    OO_  OO_OO_  OO_OO_"
+	puts "___  ______  ___    ___  ______  ______"
 	puts ""
 	puts "You lost!"
 	rnd = rand(@computer_wisdoms.length)
