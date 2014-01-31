@@ -130,7 +130,7 @@ def gameOver
 	puts "   Games tie: " + @games_tie.to_s
 	puts ""
 	puts ">-----[ I N F o ]-----------------------------------------------------<"
-	puts "   This silly game was made by 'Nodepond'"
+	puts "   This silly game was made by Martin 'Nodepond' Wisniowski"
 	puts "         for Global Game Jam 2014 at Cologne Game Lab."
 	puts "   It is open sourced and available at github:"
 	puts "         https://github.com/nodepond/SeaOfRockPaperScissors"
@@ -275,14 +275,12 @@ def okLetsGamble
 end
 
 def isInputOkay?
-
 	okay = false
-
-	if (@input == 1)
+	if @input == 1.to_s or @input == 'Rock'
 		okay = true
-	elsif (@input == 2)
+	elsif @input == 2.to_s or @input == "Paper"
 		okay = true
-	elsif (@input == 3)
+	elsif @input == 3.to_s or @input == "Scissors"
 		okay = true
 	end
 
@@ -295,10 +293,10 @@ askForInput
 
 until (@game_over)
 	if isInputOkay?
-		invalidInput
-	else
 		playComputer
 		okLetsGamble
+	else
+		invalidInput
 	end
 end
 gameOver
