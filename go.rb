@@ -151,14 +151,14 @@ def playComputer
 end
 
 def tie
-	puts " .88888.  dP     dP  dP"
-	puts "d8'   `8b 88     88  88"
-	puts "88     88 88aaaaa88  88"
-	puts "88     88 88     88  dP"
-	puts "Y8.   .8P 88     88    "
-	puts " `8888P'  dP     dP  oo"
- 	puts ""
- 	puts "We both chosed the same. Let's play again."
+    puts "d888888P oo"
+    puts "   88"
+    puts "   88    dP .d8888b."
+    puts "   88    88 88ooood8"
+    puts "   88    88 88.  ..."
+    puts "   dP    dP `88888P'"
+    puts ""
+    puts "We both chosed the same. Let's play again."
  	@games_tie += 1
  	stats
 end
