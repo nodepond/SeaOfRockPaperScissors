@@ -37,7 +37,12 @@ Bonus
 
 Mac-pirates will also like to install the Pirates.terminal color-scheme. 
 
-Unfortunately I did not found a good method to let the music play in a looped style on all systems, so there is no music, but the mp3-file still lives in there. 
+Unfortunately I did not found a good method to let the music play in a looped style on all systems, so there is no music, but the mp3-file still lives in there.
+
+Game-Jam
+--------
+
+See the [Game-Jam Page](http://globalgamejam.org/2014/games/sea-rock-paper-and-scissors) of this game (including screenshots).
 
 Copyright
 ---------
