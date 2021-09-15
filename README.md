@@ -44,6 +44,8 @@ Game-Jam
 
 See the [Game-Jam Page](http://globalgamejam.org/2014/games/sea-rock-paper-and-scissors) of this game (including screenshots).
 
+There is also a [Game Design Document](https://github.com/nodepond/SeaOfRockPaperScissors/wiki/GameDesignDocument) for this game.
+
 Copyright
 ---------
 
